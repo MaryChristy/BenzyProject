@@ -1,0 +1,102 @@
+.flight-review {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+}
+
+h2 {
+    margin: 15px 0 5px;
+    margin-left: 10px;
+    font-size: 17px;
+    padding: 5px 5px;
+}
+
+.flightreview-row {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.horizontalborder-line {
+    border-bottom: 1px solid #ededed !important;
+}
+
+.insurance-row, .insurance-row-below {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.policy-row1 {
+    display: flex;
+    width: 50%;
+    
+    justify-content: space-between;
+}
+
+.policy-row2 {
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.insurance-row-below {
+    
+    width: 60%;
+}
+
+.p-head {
+    color: #a2a1a1;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.small-heading, .small-heading1 {
+    border-collapse: collapse;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .row {
+       
+        flex-direction: column;
+        padding: 10px 20px 0;
+    }
+
+    .policy-row1, .policy-row2 {
+        width: 100%;
+    }
+    .small-heading, .small-heading1{
+        width: 33%;
+        margin-bottom: 10px;
+    
+    }
+
+    
+
+
+}
+
+
+@media only screen and (max-width: 550px) {
+    .row {
+        justify-content: flex-start !important;
+    }
+
+    .small-heading {
+        width: 100%;
+    }
+
+    .policy-row1, .policy-row2, .insurance-row-below {
+        flex-direction: column;
+    }
+}
+
+

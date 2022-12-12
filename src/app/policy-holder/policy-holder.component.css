@@ -1,0 +1,65 @@
+.holder-container {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+}
+
+
+h2 {
+    margin: 15px 0 5px;
+    margin-left: 13px;
+    font-size: 17px;
+    background: white;
+}
+
+.passenger-outer-content {
+  position: relative;
+   background: white;
+    /* border: 1px solid #e7e7e7;
+    border-radius: 8px; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.table {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    overflow: auto;
+    position: relative;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    background: white;
+}
+
+.table-content {
+    min-width: 25%;
+    gap:-5px;
+    flex-shrink: 0;
+    background: white;
+
+}
+
+.rowHeader {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 10px;
+    /* width: 30%; */
+    border-bottom: 1px dotted #d0d0d0;
+    background-color: #f8f8f8;
+    border-collapse: collapse;
+}
+
+.rowValue {
+    padding: 10px 10px;
+    border-bottom: 1px dotted #d0d0d0 ;
+}
+
+.rowValue:last-child {
+    border-bottom: none;
+}
+
+.table::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,93 @@
+.flight-review{
+    width:95.7%;
+    background: rgb(255, 255, 255);
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding:8px 11px;
+    margin-top: 10px;
+}
+
+
+.review-top{
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+
+
+}
+.review-bottom{
+
+    padding: 5px 10px;
+
+}
+span{
+    font-size: 12px;
+}
+.border-bottom{
+    width: 98%;
+    border-bottom:1px solid rgb(214, 209, 209) ;
+    padding-left: 10px;
+    margin-top: 13px;
+}
+@media  screen and (max-width : 1000px) {
+    .flight-review{
+        width:96%;
+    }
+}
+@media  screen and (max-width : 770px) {
+    .review-top{
+        
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: flex-start;
+        padding: 10px;
+        /* align-items: flex-start; */
+        margin-right: 10px;
+        /* flex-flow: row wrap; */
+    box-sizing: border-box;
+    /* display: flex; */
+    /* place-content: center space-between; */
+    align-items: center;
+    }
+    .start-date , .coverage , .adult {
+        margin-right: 80px;
+        margin-bottom: 20px;
+    }
+    .child{
+        margin-right: 112px;
+    }
+}
+@media  screen and (max-width : 580px) {
+    .review-top{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+    .start-date , .coverage , .adult,.child {
+        margin-bottom: 10px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+padding: 10px;
+align-items: flex-start;
+margin-right: 10px; */
