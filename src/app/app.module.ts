@@ -19,6 +19,8 @@ import { PolicySummaryComponent } from './reconfirmation/policy-summary/policy-s
 import { PolicyHolderComponent } from './policy-holder/policy-holder.component';
 import { FareSummaryVatComponent } from './fare-summary-vat/fare-summary-vat.component';
 import { OmanPricingComponent } from './oman-pricing/oman-pricing.component';
+import { OmanFightReviewComponent } from './oman-fight-review/oman-fight-review.component';
+import { OmanFareSummaryComponent } from './oman-fare-summary/oman-fare-summary.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { OmanPricingComponent } from './oman-pricing/oman-pricing.component';
     PolicySummaryComponent,
     PolicyHolderComponent,
     FareSummaryVatComponent,
-    OmanPricingComponent
+    OmanPricingComponent,
+    OmanFightReviewComponent,
+    OmanFareSummaryComponent
   ],
   imports: [
     BrowserModule,

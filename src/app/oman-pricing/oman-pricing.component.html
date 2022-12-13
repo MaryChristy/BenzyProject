@@ -1,1 +1,311 @@
-<p>oman-pricing works!</p>
+<div class="pricing">
+        <div class="pricing-left">
+                <div class="heading-1">
+                        <div class="heading-first">
+                                <h2>Review Your Policy</h2>
+                        </div>
+                        <div class="heading-right">
+                                <a class="search">Back to Search</a>
+                                <!-- <a >Back to Seach</a> -->
+                        </div>
+                </div>
+                <div class="policy-review">
+                        <div class="policy-review-left">
+                                <div class= "individual">
+                                        <h3>DEPART</h3>
+                                        <h4> 16 Nov’20</h4>
+                                </div>
+                                    <div class="round-trip" >
+                                        <h2 style="margin-left:5px;"><span>India</span>...<span>Oman</span> </h2>
+                                        <h2 style="color: rgb(122, 118, 118); font-size: 14px;margin-left:10px;"><span>Round Trip</span> </h2>
+                                    </div>
+                                      
+                               
+                        </div>
+        
+                        <div class="policy-review-right" (click)="openReview()">
+                            <img  style="width:25px;height:25px;"  src="/assets/images/down-arrow.jpeg" alt="">
+                                     <!-- <i style="font-size:30px; "  class="fa">&#xf107;</i>        -->
+                                    <!-- <i style='font-size:24px' class='fas'>&#xf107;</i> -->
+                                    <!-- <i class="fa fa-angle-down" style="font-size:36px"></i> -->
+    
+                          
+                                    <!-- <i class='fas fa-chevron-down' style='font-size:36px'></i> -->
+    
+                        </div>
+                    </div> 
+                    <div class="review-container" *ngIf="showReview">     
+                        <app-oman-fight-review></app-oman-fight-review>
+
+                    </div>
+       
+        <div class="heading-left">
+                <h2 >Passenger Information</h2>
+        </div>
+        <div class="passenger-info">
+                <div class="heading-2">
+                        <h4>ADULT <span style="color: rgb(122, 118, 118);">12+years</span></h4>
+                </div>
+                <div class="details">
+                        <div class="card-1">
+                                  <ul>
+                                        <li class="title"> 
+                                               
+                                                <mat-form-field  appearance="outline">
+                                                        <mat-label>Gender</mat-label>
+    
+                                                        <mat-select>
+                                                                <ng-container *ngFor="let i of title">
+                                                                        <mat-option value="{{i}}"> {{i}} </mat-option>
+                                                                </ng-container>
+                                                        </mat-select>
+    
+                                                </mat-form-field>
+                                        </li>
+                                        <li class="name">
+                                                <mat-form-field appearance="outline">
+                                                        <mat-label>First Name</mat-label>
+                                            
+                                                        <mat-error *ngIf="surname.invalid">Surname is required</mat-error>
+                                                        <input  class="" matInput placeholder="Enter Surname" [formControl]="surname" required>
+                                                      </mat-form-field>
+                                               
+                                        </li>
+                                        <li class="name">
+                                                <mat-form-field appearance="outline">
+                                                        <mat-label>Last Surname</mat-label>
+                                                        <input matInput placeholder="Enter Last Surname">
+                                                      </mat-form-field>
+                                               
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="card-2">
+                          
+                                         <ul>
+                                            <li class="passport">
+                                                    
+                                                 <mat-form-field appearance="outline">
+                                                    <mat-label>Passport Number</mat-label>
+                                                    <input  matInput placeholder="Passport Number">
+                                            </mat-form-field> 
+    
+                                            </li>
+                                            <li class="DOB"> 
+                                                    <mat-form-field appearance="outline">
+                                                            <mat-label>Date of Birth</mat-label>
+                                                            <input matInput [matDatepicker]="date">
+                                                             <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+                                                             <mat-datepicker #date></mat-datepicker>
+                                                         </mat-form-field>
+                                            </li>
+                                            <li class="nationality">
+                                                <mat-form-field appearance="outline" >
+                                                    <mat-label>Nationality</mat-label>
+                                                    <mat-select>
+                                                        <mat-option *ngFor="let i of title" value="{{i}}">
+                                                            {{i}}
+                                                        </mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </li>
+                            
+                            
+                            
+                                            <li class="nationality">
+                                                <mat-form-field appearance="outline" >
+                                                    <mat-label>Country of issue</mat-label>
+                                                    <mat-select>
+                                                        <mat-option *ngFor="let i of title" value="{{i}}" >
+                                                            {{i}}
+                                                        </mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </li>
+                            
+                                           </ul>
+                        </div>
+                        </div>
+         <div class="border-bottom"></div>
+                   
+        <div class="heading-2">
+                <h4 style="color: rgb(31, 31, 111); font-weight: 500;">Child(02-22years)</h4>
+        </div>
+                <div class="details">
+                        <div class="card-1">
+                                <ul>
+                                      <li class="title"> 
+                                             
+                                              <mat-form-field  appearance="outline">
+                                                      <mat-label>Gender</mat-label>
+  
+                                                      <mat-select>
+                                                              <ng-container *ngFor="let i of title">
+                                                                      <mat-option value="{{i}}"> {{i}} </mat-option>
+                                                              </ng-container>
+                                                      </mat-select>
+  
+                                              </mat-form-field>
+                                      </li>
+                                      <li class="name">
+                                              <mat-form-field appearance="outline">
+                                                      <mat-label>First Name</mat-label>
+                                          
+                                                      <mat-error *ngIf="surname.invalid">Surname is required</mat-error>
+                                                      <input  class="" matInput placeholder="Enter Surname" [formControl]="surname" required>
+                                                    </mat-form-field>
+                                             
+                                      </li>
+                                      <li class="name">
+                                              <mat-form-field appearance="outline">
+                                                      <mat-label>Last Surname</mat-label>
+                                                      <input matInput placeholder="Enter Last Surname">
+                                                    </mat-form-field>
+                                             
+                                      </li>
+                              </ul>
+                      </div>
+                      <div class="card-2">
+                        
+                                       <ul>
+                                          <li class="passport">
+                                                  
+                                               <mat-form-field appearance="outline">
+                                                  <mat-label>Passport Number</mat-label>
+                                                  <input  matInput placeholder="Passport Number">
+                                          </mat-form-field> 
+  
+                                          </li>
+                                          <li class="DOB"> 
+                                                  <mat-form-field appearance="outline">
+                                                          <mat-label>Date of Birth</mat-label>
+                                                          <input matInput [matDatepicker]="date1">
+                                                           <mat-datepicker-toggle matSuffix [for]="date1"></mat-datepicker-toggle>
+                                                           <mat-datepicker #date1></mat-datepicker>
+                                                       </mat-form-field>
+                                          </li>
+                                          <li class="nationality">
+                                              <mat-form-field appearance="outline" >
+                                                  <mat-label>Nationality</mat-label>
+                                                  <mat-select>
+                                                      <mat-option *ngFor="let i of title" value="{{i}}">
+                                                          {{i}}
+                                                      </mat-option>
+                                                  </mat-select>
+                                              </mat-form-field>
+                                          </li>
+                          
+                          
+                          
+                                          <li class="nationality">
+                                              <mat-form-field appearance="outline" >
+                                                  <mat-label>Country of issue</mat-label>
+                                                  <mat-select>
+                                                      <mat-option *ngFor="let i of title" value="{{i}}" >
+                                                          {{i}}
+                                                      </mat-option>
+                                                  </mat-select>
+                                              </mat-form-field>
+                                          </li>
+                          
+                                         </ul>
+                      </div>
+                </div>
+         <div class="border-bottom"></div>
+
+                      <div class="heading-2">
+                        <h4 style="color: rgb(31, 31, 111); font-weight: 500;">Child(02-22years)</h4>
+                </div>
+                <div class="details">
+                      <div class="card-1">
+                        <ul>
+                              <li class="title"> 
+                                     
+                                      <mat-form-field  appearance="outline">
+                                              <mat-label>Gender</mat-label>
+
+                                              <mat-select>
+                                                      <ng-container *ngFor="let i of title">
+                                                              <mat-option value="{{i}}"> {{i}} </mat-option>
+                                                      </ng-container>
+                                              </mat-select>
+
+                                      </mat-form-field>
+                              </li>
+                              <li class="name">
+                                      <mat-form-field appearance="outline">
+                                              <mat-label>First Name</mat-label>
+                                  
+                                              <mat-error *ngIf="surname.invalid">Surname is required</mat-error>
+                                              <input  class="" matInput placeholder="Enter Surname" [formControl]="surname" required>
+                                            </mat-form-field>
+                                     
+                              </li>
+                              <li class="name">
+                                      <mat-form-field appearance="outline">
+                                              <mat-label>Last Surname</mat-label>
+                                              <input matInput placeholder="Enter Last Surname">
+                                            </mat-form-field>
+                                     
+                              </li>
+                      </ul>
+              </div>
+              <div class="card-2">
+                
+                               <ul>
+                                  <li class="passport">
+                                          
+                                       <mat-form-field appearance="outline">
+                                          <mat-label>Passport Number</mat-label>
+                                          <input  matInput placeholder="Passport Number">
+                                  </mat-form-field> 
+
+                                  </li>
+                                  <li class="DOB"> 
+                                          <mat-form-field appearance="outline">
+                                                  <mat-label>Date of Birth</mat-label>
+                                                  <input matInput [matDatepicker]="date2">
+                                                   <mat-datepicker-toggle matSuffix [for]="date2"></mat-datepicker-toggle>
+                                                   <mat-datepicker #date2></mat-datepicker>
+                                               </mat-form-field>
+                                  </li>
+                                  <li class="nationality">
+                                      <mat-form-field appearance="outline" >
+                                          <mat-label>Nationality</mat-label>
+                                          <mat-select>
+                                              <mat-option *ngFor="let i of title" value="{{i}}">
+                                                  {{i}}
+                                              </mat-option>
+                                          </mat-select>
+                                      </mat-form-field>
+                                  </li>
+                  
+                  
+                  
+                                  <li class="nationality">
+                                      <mat-form-field appearance="outline" >
+                                          <mat-label>Country of issue</mat-label>
+                                          <mat-select>
+                                              <mat-option *ngFor="let i of title" value="{{i}}" >
+                                                  {{i}}
+                                              </mat-option>
+                                          </mat-select>
+                                      </mat-form-field>
+                                  </li>
+                  
+                                 </ul>
+                                </div>
+              </div>
+
+                                   
+                            
+                     </div>
+                </div>
+        
+        <div class="pricing-right">
+               <div class="fare-details">
+                       <h2>Fare Details</h2>
+               </div>
+               <app-oman-fare-summary></app-oman-fare-summary>   
+        </div>
+        </div>
